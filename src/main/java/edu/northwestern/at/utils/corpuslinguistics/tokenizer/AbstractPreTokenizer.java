@@ -77,7 +77,7 @@ abstract public class AbstractPreTokenizer
 	protected final static String alwaysSeparators	=
 		"(" +
 			hyphens + "|" + periods + "|" +
-			"[\\(\\)\\[\\]\\{\\}\";:/=`¶<>" +
+			"[\\(\\)\\[\\]\\{\\}\";:/=`Â¶<>" +
 			CharUtils.LDQUOTE +
 			CharUtils.RDQUOTE +
 			CharUtils.LONG_DASH +

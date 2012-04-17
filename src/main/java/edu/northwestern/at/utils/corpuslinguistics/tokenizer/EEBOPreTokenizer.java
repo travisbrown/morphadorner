@@ -17,7 +17,7 @@ public class EEBOPreTokenizer
 	protected final static String EEBOAlwaysSeparators	=
 		"(" +
 			hyphens + "|" + periods + "|" +
-			"[\\(\\)\\[\\]\\{\\}\";:/=`¶<>" +
+			"[\\(\\)\\[\\]\\{\\}\";:/=`Â¶<>" +
 			CharUtils.LDQUOTE +
 			CharUtils.RDQUOTE +
 			CharUtils.LONG_DASH +

@@ -204,7 +204,7 @@ public class DoubleMetaphone
                     addCode('B', 'P');
                     break;
 
-                case 'Ç':
+                case 'Ã‡':
                     add('S');
                     current++;
                     // Note: no doublecheck
@@ -594,7 +594,7 @@ public class DoubleMetaphone
                     addCode('N', 'N');
                     break;
 
-                case 'Ñ':
+                case 'Ã‘':
                     current++;
                     add('N');
                     break;
