@@ -9,22 +9,33 @@
   <version>1.0</version>
 
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <scala.version>2.9.1</scala.version>
   </properties>
 
-  <repositories>
+  <!--<repositories>
     <repository>
       <id>scala-tools.releases</id>
       <name>Scala-Tools Dependencies Repository for Releases</name>
       <url>http://scala-tools.org/repo-releases</url>
     </repository>
-  </repositories>
+  </repositories>-->
 
   <dependencies>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.4</version>
+    </dependency>
     <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
       <version>1.2.9</version>
+    </dependency>
+    <dependency>
+      <groupId>uk.ac.gate</groupId>
+      <artifactId>gate-core</artifactId>
+      <version>7.0</version>
     </dependency>
     <dependency>
       <groupId>com.ibm.icu</groupId>
@@ -41,11 +52,11 @@
       <artifactId>isorelax</artifactId>
       <version>20050913</version>
     </dependency>
-    <dependency>
+    <!--<dependency>
       <groupId>org.iso_relax.verifier.jaxp.validation</groupId>
       <artifactId>isorelax-jaxp-bridge</artifactId>
       <version>1.0</version>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>com.github.relaxng</groupId>
       <artifactId>relaxngDatatype</artifactId>
@@ -56,7 +67,7 @@
       <artifactId>xsdlib</artifactId>
       <version>20060615</version>
     </dependency>
-    <dependency>
+    <!--<dependency>
       <groupId>net.sf.trove4j</groupId>
       <artifactId>trove4j</artifactId>
       <version>2.0.2</version>
@@ -86,7 +97,7 @@
       <artifactId>specs2_${scala.version}</artifactId>
       <version>1.6.1</version>
       <scope>test</scope>
-    </dependency>
+    </dependency>-->
   </dependencies>
 
   <build>
