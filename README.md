@@ -13,21 +13,19 @@ Last update: April 29, 2009
 File Layout of Morphadorner Release
 -----------------------------------
 
-File or Directory          Contents
-=========================  ================================================
-aareadme1st.txt            Printable copy of this file in Windows text
-                           format (lines terminated by Ascii cr/lf).
-bin/                       Binaries for MorphAdorner.
-build.xml                  Apache Ant build file used to compile
-                           MorphAdorner.
-data/                      Data files used by MorphAdorner.
-documentation/             MorphAdorner documentation.
-gatelib/                   Java libraries used by Gate.
-javadoc/                   Javadoc (internal documentation).
-jetty/                     Web server for running sample servlets.
-lib/                       Java library files.
-misc/                      Miscellaneous files for compiling MorphAdorner.
-src/                       MorphAdorner source code.
+    File or Directory          Contents
+    =========================  ================================================
+    README.md                  Printable copy of this file in Windows text
+                               format (lines terminated by Ascii cr/lf).
+    pom.xml                    Apache Maven project configuration file used to
+                               compile MorphAdorner.
+    data/                      Data files used by MorphAdorner.
+    documentation/             MorphAdorner documentation.
+    gatelib/                   Java libraries used by Gate.
+    javadoc/                   Javadoc (internal documentation).
+    jetty/                     Web server for running sample servlets.
+    misc/                      Miscellaneous files for compiling MorphAdorner.
+    src/                       MorphAdorner source code.
 
 Installing and Building MorphAdorner
 ------------------------------------
