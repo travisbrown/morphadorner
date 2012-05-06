@@ -1,0 +1,102 @@
+#!/bin/sh
+
+CLASSPATH=target/classes:`mvn dependency:build-classpath | grep "^[^\[]"`
+MEMORY=2g
+COMMAND="java -Xmx$MEMORY -cp $CLASSPATH edu.northwestern.at.morphadorner.MorphAdorner"
+
+case $1 in
+  adorndocsouth) $COMMAND \
+    -p properties/docsouth.properties \
+    -l data/ncflexicon.lex \
+    -t data/ncftransmat.mat \
+    -u data/ncfsuffixlexicon.lex \
+    -a data/ncfmergedspellingpairs.tab \
+    -s data/standardspellings.txt \
+    -w data/spellingsbywordclass.txt \
+    -o $2 \
+    ${@:3};;
+  adorneaf) $COMMAND \
+    -p properties/eaf.properties \
+    -l data/ncflexicon.lex \
+    -t data/ncftransmat.mat \
+    -u data/ncfsuffixlexicon.lex \
+    -a data/ncfmergedspellingpairs.tab \
+    -s data/standardspellings.txt \
+    -w data/spellingsbywordclass.txt \
+    -o $2 \
+    ${@:3};;
+  adornecco) $COMMAND \
+    -p properties/ecco.properties \
+    -l data/ncflexicon.lex \
+    -t data/ncftransmat.mat \
+    -u data/ncfsuffixlexicon.lex \
+    -a data/ncfmergedspellingpairs.tab \
+    -s data/standardspellings.txt \
+    -w data/spellingsbywordclass.txt \
+    -o $2 \
+    ${@:3};;
+  adorneme) $COMMAND \
+    -p properties/eme.properties \
+    -l data/emelexicon.lex \
+    -t data/emetransmat.mat \
+    -u data/emesuffixlexicon.lex \
+    -a data/ememergedspellingpairs.tab \
+    -s data/standardspellings.txt \
+    -w data/spellingsbywordclass.txt \
+    -o $2 \
+    ${@:3};;
+  adornncf) $COMMAND \
+    -p properties/ncf.properties \
+    -l data/ncflexicon.lex \
+    -t data/ncftransmat.mat \
+    -u data/ncfsuffixlexicon.lex \
+    -a data/ncfmergedspellingpairs.tab \
+    -s data/standardspellings.txt \
+    -w data/spellingsbywordclass.txt \
+    -o $2 \
+    ${@:3};;
+  adornncfa) $COMMAND \
+    -p properties/ncfa.properties \
+    -l data/ncflexicon.lex \
+    -t data/ncftransmat.mat \
+    -u data/ncfsuffixlexicon.lex \
+    -a data/ncfmergedspellingpairs.tab \
+    -s data/standardspellings.txt \
+    -w data/spellingsbywordclass.txt \
+    -o $2 \
+    ${@:3};;
+  adornplaineme) $COMMAND \
+    -p properties/emeplaintext.properties \
+    -l data/emelexicon.lex \
+    -t data/emetransmat.mat \
+    -u data/emesuffixlexicon.lex \
+    -a data/ememergedspellingpairs.tab \
+    -s data/standardspellings.txt \
+    -w data/spellingsbywordclass.txt \
+    -o $2 \
+    ${@:3};;
+  adornplaintext) $COMMAND \
+    -p properties/plaintext.properties \
+    -l data/ncflexicon.lex \
+    -t data/ncftransmat.mat \
+    -u data/ncfsuffixlexicon.lex \
+    -a data/ncfmergedspellingpairs.tab \
+    -s data/standardspellings.txt \
+    -w data/spellingsbywordclass.txt \
+    -o $2 \
+    ${@:3};;
+  adornwright) $COMMAND \
+    -p properties/wright.properties \
+    -l data/ncflexicon.lex \
+    -t data/ncftransmat.mat \
+    -u data/ncfsuffixlexicon.lex \
+    -a data/ncfmergedspellingpairs.tab \
+    -s data/standardspellings.txt \
+    -w data/spellingsbywordclass.txt \
+    -o $2 \
+    ${@:3};;
+  adornwithne) java -Xmx$MEMORY -cp $CLASSPATH \
+    edu.northwestern.at.morphadorner.tools.namedentities.AdornWithNamedEntities \
+    ${@:2};;
+esac
+
